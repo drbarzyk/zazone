@@ -1,53 +1,24 @@
 import React from 'react'
 
-// function buildMenu() {
-//     const menu = [
-//         {
-//             name: "The McCheese",
-//             desc: "The McCheesiest McPizza you'll ever McEat",
-//             tops: ["Parmesan", "Wes's Special Sauce"],
-//             cost: 7.00
-//         },
-//         {
-//             name: "The Ham",
-//             desc: "<3",
-//             tops: ["Ham", "Bacon", "Parmesan"],
-//             cost: 7.00
-//         },
-//         {
-//             name: "The HighPAs Pie",
-//             desc: "Official Pizza of the HighPAs Podcast",
-//             tops: ["Blacksburg's Finest Bud", "Wes's Special Sauce", "Smoked Mozz"],
-//             cost: 10.00
-//         }
-//     ];
-//     let items = [];
-//     for (let i = 0; i < menu.length; i++) {
-//         const item = menu[i];
-//         items.push(<MenuItem name={item.name} desc={item.desc} tops={item.tops} cost={item.cost}/>);
-//     }
-//     return items;
-// }
-
 function Menu() {
     const menu = [
         {
             name: "The McCheese",
             desc: "The McCheesiest McZa You'll Ever McEat",
-            tops: ["Wes's Special Sauce", "Parmesan"],
+            tops: ["wes's special sauce", "parm", "mozz", "peppa jack"],
             cost: 7.00
         },
         {
             name: "The Ham",
             desc: "<3",
-            tops: ["Ham", "Bacon", "Parmesan"],
+            tops: ["ham", "bacon", "parm"],
             cost: 7.00
         },
         {
-            name: "The HighPAs Pie",
-            desc: "The Official Za of the HighPAs Podcast",
-            tops: ["Blacksburg's Finest Bud", "Wes's Special Sauce", "Smoked Mozz"],
-            cost: 10.00
+            name: "The Dan Special",
+            desc: "\"The way Za was meant to be enjoyed\"",
+            tops: ["wes's special sauce", "parm", "that jawnt baked to perfection!"],
+            cost: 7.00
         }
     ];
 
