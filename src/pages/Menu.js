@@ -5,7 +5,7 @@ function Menu() {
         {
             name: "The McCheese",
             desc: "The McCheesiest McZa You'll Ever McEat",
-            tops: ["wes's special sauce", "parm", "mozz", "peppa jack"],
+            tops: ["parm", "mozz", "wes's special sauce"],
             cost: 7.00
         },
         {
@@ -15,9 +15,9 @@ function Menu() {
             cost: 7.00
         },
         {
-            name: "The Dan Special",
-            desc: "\"The way Za was meant to be enjoyed\"",
-            tops: ["wes's special sauce", "parm", "that jawnt baked to perfection!"],
+            name: "The Margherita",
+            desc: "Enjoy the Italian flag on a Za 🇮🇹",
+            tops: ["mozz", "basil", "wes's special sauce"],
             cost: 7.00
         }
     ];
