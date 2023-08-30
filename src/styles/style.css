@@ -1,0 +1,429 @@
+/*******************************
+    Main Styling
+*******************************/
+
+:root {
+  --gradient-primary: rgb(255, 0, 0, .95);
+  --gradient-secondary: rgb(255, 123, 0, .98);
+  --menu-speed: 0.5s;
+  --header-height: 92px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Sora', sans-serif;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+  background: linear-gradient(180deg, var(--gradient-primary) 50%, var(--gradient-secondary) 130%);
+  color: #fff;
+  min-height: 100vh;
+  position: relative;
+}
+
+.app:before {
+  content: '';
+  background: url('../img/wallpaper.jpeg') no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 3rem;
+}
+
+.wrapper {
+  height: 100vh;
+}
+
+/*******************************
+    Nav Menu
+*******************************/
+
+.header {
+  width: 100%;
+}
+
+.brand-icon {
+  width: 64px;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.menu-wrap > * {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.menu-wrap .hamburger {
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-wrap .toggler {
+  z-index: 2;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  opacity: 0;
+}
+
+/* Hamburger Line */
+.menu-wrap .hamburger > div {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--menu-speed) ease;
+}
+
+.menu-wrap .hamburger > div:before,
+.menu-wrap .hamburger > div:after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 4px;
+  background: inherit;
+}
+
+.menu-wrap .hamburger > div:after {
+  top: 10px;
+}
+
+/* Toggler animate */
+.menu-wrap .toggler:checked + .hamburger > div {
+  transform: rotate(135deg);
+  background-color: var(--gradient-primary);
+}
+
+/* Turn lines into X */
+.menu-wrap .toggler:checked + .hamburger > div:before,
+.menu-wrap .toggler:checked + .hamburger > div:after {
+  top: 0;
+  transform: rotate(90deg);
+  background-color: var(--gradient-primary);
+}
+
+/* Rotate on hover when checked */
+.menu-wrap .toggler:checked:hover + .hamburger > div {
+  transform: rotate(225deg);
+}
+
+/* Show menu */
+.menu-wrap .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+  transform: scale(1);
+  transition-duration: var(--menu-speed);
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
+  opacity: 1;
+  transition: opacity var(--menu-speed);
+}
+
+.menu-wrap .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-wrap .menu > div {
+  background: white;
+  border-radius: 50%;
+  width: 250vw;
+  height: 250vw;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all var(--menu-speed) ease;
+}
+
+.menu-wrap .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transition: opacity var(--menu-speed) ease;
+}
+
+.menu-wrap .menu > div > div > ul > li {
+  list-style: none;
+  color: var(--gradient-primary);
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  margin: 1rem;
+}
+
+.menu-wrap .menu > div > div > ul > li > a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--menu-speed) ease;
+}
+
+/*******************************
+    Home Page - Landing
+*******************************/
+
+.landing .landing-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.landing .landing-inner > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.landing .landing-inner > div > * {
+  margin: 0 .25rem;
+}
+
+.landing .landing-inner h1 {
+  font-size: 10vw;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: .5rem;
+}
+
+.landing .landing-inner .tagline {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  background: white;
+  border-radius: 2rem;
+}
+
+.landing .btn {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  background: white;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  color: var(--gradient-primary);
+  border: 2px solid white;
+  transition: all .2s;
+  padding: .5rem 1rem;
+  text-decoration: none;
+  box-shadow: 0px 3px rgba(0, 0, 0, 0.25);
+}
+
+.landing .btn:hover {
+  background: var(--gradient-primary);
+  color: white;
+  transition: all .2s;
+  border: 2px solid white;
+  cursor: pointer;
+  transform: scale(1.2);
+  box-shadow: 0px 3px rgba(255, 255, 255, 0.75);
+}
+
+.landing .btn:active {
+  background: white;
+  color: var(--gradient-primary);
+  transform: translateY(6px) scale(1.2);
+}
+
+/*******************************
+  Page Content
+*******************************/
+
+.page-content {
+  /* height: 100%; */
+  padding: var(--header-height) 2rem;
+}
+
+.pg-header {
+  font-size: 4rem;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.locked-link > a {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+/*******************************
+    Pizza Menu
+*******************************/
+
+.menu-pg {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.menu-pg .card {
+  flex-grow: 1;
+  background: white;
+  color: black;
+  border-radius: 2em;
+  border: none;
+  box-shadow: 0 5px rgba(0, 0, 0, 0.25);
+  padding: 1.5rem;
+  margin: .5rem 0;
+  min-width: 100%;
+}
+
+.menu-pg .card .card-header {
+  display: flex;
+  align-items: baseline;
+  font-size: 1.5rem;
+  justify-content: space-between;
+}
+
+.menu-pg .card .card-header .cost {
+  color: black;
+}
+
+.menu-pg .card .card-body {
+
+}
+
+.menu-pg .card .desc {
+  font-family: 'Resist Sans';
+  /* white-space: nowrap; */
+  color: var(--gradient-primary);
+}
+
+.menu-pg .card .tops {
+  font-family: 'Resist Sans Light';
+  margin: .5em 0;
+}
+
+.menu-pg .card .btn {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  background: var(--gradient-primary);
+  border-radius: 2rem;
+  text-transform: uppercase;
+  color: white;
+  border: 2px solid var(--gradient-primary);
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.25);
+  transition: all .2s;
+  padding: .5rem 1rem;
+  text-decoration: none;
+}
+
+.menu-pg .card .btn:hover {
+  background: white;
+  color: var(--gradient-primary);
+  transition: all .2s;
+  border: 2px solid var(--gradient-primary);
+  cursor: pointer;
+  box-shadow: 0px 3px var(--gradient-primary);
+}
+
+.menu-pg .card .btn:active {
+  background: var(--gradient-primary);
+  color: white;
+  box-shadow: 0px 3px rgba(0, 0, 0, 0.25);
+  transform: translateY(6px);
+}
+
+/*******************************
+    Ticker - Credit to W.S. Toh
+    https://code-boxx.com/html-css-news-ticker-horizontal-vertical/#sec-horizontal
+*******************************/
+
+/* (A) FIXED WRAPPER */
+.ticker-wrap {
+  overflow: hidden; /* HIDE SCROLL BAR */
+}
+ 
+/* (B) MOVING TICKER WRAPPER */
+.ticker-move { 
+  display: flex;
+}
+
+/* (C) ITEMS - INTO A LONG HORIZONTAL ROW */
+.ticker-item {
+  flex-shrink: 0;
+  box-sizing: border-box;
+  padding: .25rem;
+  text-align: center;
+  z-index: -1;
+}
+ 
+/* (D) ANIMATION - MOVE ITEMS FROM RIGHT TO LEFT */
+/* 1 ITEM -100%, CHANGE THIS IF YOU ADD/REMOVE ITEMS */
+@keyframes ticker {
+  0% { transform: translate3d(100%, 0, 0); }
+  100% { transform: translate3d(-100%, 0, 0); }
+}
+.ticker-move { 
+  animation: ticker linear 8s infinite;
+}
+.ticker-move:hover { animation-play-state: paused; }
+
+/*
+<div className="ticker-wrap">
+    <div className="ticker-move">
+        <div className="ticker-item desc">
+            <span>{item.desc}</span>
+        </div>
+    </div>
+</div>
+*/
+
+/*******************************
+    Responsive
+*******************************/
+
+@media screen and (max-width: 400px) {
+  .landing .landing-inner h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .landing .landing-inner h1 {
+    font-size: 120px;
+  }
+}

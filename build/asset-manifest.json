@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6fbd0eef.chunk.css",
+    "main.js": "/static/js/main.8439b713.chunk.js",
+    "main.js.map": "/static/js/main.8439b713.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.76f5f24e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.76f5f24e.js.map",
+    "static/js/2.a44f8dc2.chunk.js": "/static/js/2.a44f8dc2.chunk.js",
+    "static/js/2.a44f8dc2.chunk.js.map": "/static/js/2.a44f8dc2.chunk.js.map",
+    "static/js/3.399244de.chunk.js": "/static/js/3.399244de.chunk.js",
+    "static/js/3.399244de.chunk.js.map": "/static/js/3.399244de.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.6fbd0eef.chunk.css.map": "/static/css/main.6fbd0eef.chunk.css.map",
+    "static/js/2.a44f8dc2.chunk.js.LICENSE.txt": "/static/js/2.a44f8dc2.chunk.js.LICENSE.txt",
+    "static/media/stylesheet.css": "/static/media/groteskly_yours_-_resist_sans_text_light-webfont.8623a18d.woff",
+    "static/media/style.css": "/static/media/wallpaper.81256320.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.76f5f24e.js",
+    "static/js/2.a44f8dc2.chunk.js",
+    "static/css/main.6fbd0eef.chunk.css",
+    "static/js/main.8439b713.chunk.js"
+  ]
+}
